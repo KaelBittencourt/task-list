@@ -5,7 +5,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
   const navigate = useNavigate();
 
   function onSeeDetailsClick() {
-    navigate(`/tasks?títle`)
+    navigate(`/tasks?títle`);
   }
 
   return (
@@ -20,7 +20,10 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
           >
             {task.title}
           </button>
-          <button onClick={() => } className="bg-slate-400 p-2 rounded-md text-white">
+          <button
+            onClick={onSeeDetailsClick}
+            className="bg-slate-400 p-2 rounded-md text-white"
+          >
             <ChevronRight />
           </button>
           <button
